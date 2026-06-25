@@ -158,3 +158,11 @@ Learning      ██████████   24 × 7
 ⭐ Thank you for visiting my profile!
 
 </div>
+
+---
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/santhoshkarthik1975-wq/santhoshkarthik1975-wq/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation" />
+</p>
