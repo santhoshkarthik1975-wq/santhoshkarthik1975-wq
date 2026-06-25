@@ -1,6 +1,6 @@
-<div align="center">
-
-<img src="./assets/banner.svg" width="100%" alt="K. Santhosh Cyberpunk Banner"/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/santhoshkarthik1975-wq/santhoshkarthik1975-wq/main/assets/banner.svg" alt="K. Santhosh Banner" width="100%">
+</p>
 
 # ⚡ K. Santhosh
 
@@ -26,7 +26,7 @@
 
 ![](https://komarev.com/ghpvc/?username=santhoshkarthik1975-wq\&style=for-the-badge\&color=blueviolet)
 
-</div>
+
 
 ---
 
