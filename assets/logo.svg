@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <!-- Background -->
+  <rect width="220" height="220" fill="#050816" />
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Neon Gradient -->
+    <radialGradient id="animatedGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6">
+        <animate attributeName="stop-color" values="#8B5CF6;#22D3EE;#8B5CF6" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#22D3EE">
+        <animate attributeName="stop-color" values="#22D3EE;#8B5CF6;#22D3EE" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Glassmorphism Panel -->
+    <filter id="glassEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="0 0 0 0 0.2 0 0 0 0 0.4 0 0 0 0 0.6 0 0 0 0.2 0"
+        result="glass"
+      />
+      <feBlend in="SourceGraphic" in2="glass" mode="normal" />
+    </filter>
+
+    <!-- Particle Gradient -->
+    <radialGradient id="particleGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Concentric Rings -->
+  <g filter="url(#neonGlow)">
+    <circle cx="110" cy="110" r="100" stroke="url(#animatedGradient)" stroke-width="2" fill="none" />
+    <circle cx="110" cy="110" r="90" stroke="url(#animatedGradient)" stroke-width="1" fill="none" opacity="0.5" />
+    <circle cx="110" cy="110" r="80" stroke="url(#animatedGradient)" stroke-width="1" fill="none" opacity="0.3" />
+  </g>
+
+  <!-- Rotating Segmented Rings -->
+  <g>
+    <circle cx="110" cy="110" r="70" stroke="url(#animatedGradient)" stroke-width="2" fill="none" stroke-dasharray="10,5">
+      <animateTransform attributeName="transform" type="rotate" from="0 110 110" to="360 110 110" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="110" cy="110" r="60" stroke="url(#animatedGradient)" stroke-width="2" fill="none" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" from="360 110 110" to="0 110 110" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Circuit Traces -->
+  <g stroke="url(#animatedGradient)" stroke-width="0.5" opacity="0.7">
+    <line x1="110" y1="10" x2="110" y2="30" />
+    <line x1="110" y1="190" x2="110" y2="210" />
+    <line x1="10" y1="110" x2="30" y2="110" />
+    <line x1="190" y1="110" x2="210" y2="110" />
+    <line x1="40" y1="40" x2="60" y2="60" />
+    <line x1="160" y1="160" x2="180" y2="180" />
+  </g>
+
+  <!-- Hexagonal Accents -->
+  <g fill="url(#animatedGradient)" opacity="0.8">
+    <polygon points="110,30 115,40 110,50 105,40" />
+    <polygon points="110,190 115,200 110,210 105,200" />
+    <polygon points="30,110 40,115 50,110 40,105" />
+    <polygon points="190,110 200,115 210,110 200,105" />
+  </g>
+
+  <!-- Glassmorphism Panel -->
+  <circle cx="110" cy="110" r="50" fill="url(#animatedGradient)" opacity="0.1" filter="url(#glassEffect)" />
+
+  <!-- Custom KS Initials -->
+  <g fill="url(#animatedGradient)" filter="url(#neonGlow)">
+    <path d="M90 130 L90 90 L110 110 L90 130 Z" /> <!-- K -->
+    <path d="M120 90 L140 90 L140 130 L120 130 L120 110 L140 110" /> <!-- S -->
+  </g>
+
+  <!-- Particles -->
+  <g>
+    <circle cx="50" cy="50" r="2" fill="url(#particleGradient)">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="170" cy="170" r="2" fill="url(#particleGradient)">
+      <animate attributeName="opacity" values="1;0;1" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="80" cy="160" r="2" fill="url(#particleGradient)">
+      <animate attributeName="opacity" values="1;0;1" dur="5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
