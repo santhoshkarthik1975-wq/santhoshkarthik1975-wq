@@ -1,112 +1,2494 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500">
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <!-- Background -->
-  <defs>
-    <!-- Gradient for the background -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050816" />
-      <stop offset="100%" stop-color="#0B1120" />
-    </linearGradient>
+<svg
+xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1600 500"
+width="1600"
+height="500"
+overflow="hidden">
 
-    <!-- Neon gradient -->
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8B5CF6" />
-      <stop offset="100%" stop-color="#22D3EE" />
-    </linearGradient>
+<!-- ================================================= -->
+<!-- CYBERPUNK DEVELOPER BANNER -->
+<!-- Part 1A : Foundation -->
+<!-- ================================================= -->
 
-    <!-- Glow filter -->
-    <filter id="neonGlow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-      <feMerge>
-        <feMergeNode in="coloredBlur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+<defs>
 
-    <!-- Glassmorphism Effect -->
-    <filter id="glass">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-      <feColorMatrix
-        in="blur"
-        type="matrix"
-        values="0 0 0 0 0.2 0 0 0 0 0.4 0 0 0 0 0.6 0 0 0 0.2 0"
-        result="glass"
-      />
-      <feBlend in="SourceGraphic" in2="glass" mode="normal" />
-    </filter>
+<!-- ================= Background ================= -->
 
-    <!-- Particle gradient -->
-    <radialGradient id="particleGradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22D3EE" />
-      <stop offset="100%" stop-color="transparent" />
-    </radialGradient>
-  </defs>
+<linearGradient id="bgGradient"
+x1="0%"
+y1="0%"
+x2="100%"
+y2="100%">
 
-  <!-- Background -->
-  <rect width="1600" height="500" fill="url(#bgGradient)" />
+<stop offset="0%" stop-color="#04040A"/>
 
-  <!-- Left Section: Branding -->
+<stop offset="45%" stop-color="#090E1D"/>
+
+<stop offset="100%" stop-color="#111827"/>
+
+</linearGradient>
+
+<!-- ================= Purple Neon ================= -->
+
+<linearGradient id="purpleGlow">
+
+<stop offset="0%" stop-color="#7C3AED"/>
+
+<stop offset="100%" stop-color="#A855F7"/>
+
+</linearGradient>
+
+<!-- ================= Cyan Neon ================= -->
+
+<linearGradient id="cyanGlow">
+
+<stop offset="0%" stop-color="#06B6D4"/>
+
+<stop offset="100%" stop-color="#22D3EE"/>
+
+</linearGradient>
+
+<!-- ================= Horizon ================= -->
+
+<linearGradient id="skyGlow"
+x1="0%"
+y1="0%"
+x2="0%"
+y2="100%">
+
+<stop offset="0%" stop-color="#8B5CF6" stop-opacity=".18"/>
+
+<stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+
+</linearGradient>
+
+<!-- ================= Neon Glow ================= -->
+
+<filter id="neon">
+
+<feGaussianBlur
+stdDeviation="4"
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+<!-- ================= Soft Glow ================= -->
+
+<filter id="softGlow">
+
+<feGaussianBlur
+stdDeviation="14"
+result="blur"/>
+
+<feMerge>
+
+<feMergeNode in="blur"/>
+
+<feMergeNode in="SourceGraphic"/>
+
+</feMerge>
+
+</filter>
+
+<!-- ================= Tiny Star ================= -->
+
+<circle id="star"
+cx="0"
+cy="0"
+r="1.4"
+fill="#E0F2FE"/>
+
+</defs>
+
+<!-- ================================================= -->
+<!-- Background -->
+<!-- ================================================= -->
+
+<rect
+width="1600"
+height="500"
+fill="url(#bgGradient)"/>
+
+<!-- Horizon Glow -->
+
+<ellipse
+cx="800"
+cy="430"
+rx="900"
+ry="180"
+fill="url(#skyGlow)"
+filter="url(#softGlow)"/>
+
+<!-- Left Neon Glow -->
+
+<circle
+
+cx="-120"
+
+cy="180"
+
+r="300"
+
+fill="#7C3AED"
+
+opacity=".12">
+
+<animate
+
+attributeName="opacity"
+
+values=".08;.18;.08"
+
+dur="7s"
+
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- Right Glow -->
+
+<circle
+
+cx="1700"
+
+cy="140"
+
+r="260"
+
+fill="#22D3EE"
+
+opacity=".10">
+
+<animate
+
+attributeName="opacity"
+
+values=".05;.16;.05"
+
+dur="9s"
+
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- ================================================= -->
+<!-- Stars -->
+<!-- ================================================= -->
+
+<g opacity=".95">
+
+<use href="#star" x="120" y="80"/>
+<use href="#star" x="220" y="40"/>
+<use href="#star" x="360" y="120"/>
+<use href="#star" x="510" y="65"/>
+<use href="#star" x="640" y="95"/>
+<use href="#star" x="760" y="40"/>
+<use href="#star" x="920" y="100"/>
+<use href="#star" x="1100" y="70"/>
+<use href="#star" x="1240" y="35"/>
+<use href="#star" x="1420" y="90"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- End Part 1A -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 1B : Cyber Grid + Scanlines -->
+<!-- ================================================= -->
+
+<!-- Perspective Floor Grid -->
+
+<g opacity="0.18">
+
+  <!-- Horizontal -->
+
+  <line x1="0" y1="460" x2="1600" y2="460" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="0" y1="445" x2="1600" y2="445" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="0" y1="430" x2="1600" y2="430" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="0" y1="410" x2="1600" y2="410" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="0" y1="385" x2="1600" y2="385" stroke="#22D3EE" stroke-width="1"/>
+
+  <!-- Perspective Vertical -->
+
+  <path d="M800 500 L800 250" stroke="#8B5CF6"/>
+  <path d="M650 500 L760 250" stroke="#8B5CF6"/>
+  <path d="M500 500 L720 250" stroke="#8B5CF6"/>
+  <path d="M350 500 L680 250" stroke="#8B5CF6"/>
+  <path d="M200 500 L640 250" stroke="#8B5CF6"/>
+  <path d="M950 500 L840 250" stroke="#8B5CF6"/>
+  <path d="M1100 500 L880 250" stroke="#8B5CF6"/>
+  <path d="M1250 500 L920 250" stroke="#8B5CF6"/>
+  <path d="M1400 500 L960 250" stroke="#8B5CF6"/>
+
+</g>
+
+<!-- Horizon -->
+
+<line
+x1="0"
+y1="250"
+x2="1600"
+y2="250"
+stroke="#22D3EE"
+stroke-opacity=".35"
+stroke-width="2">
+
+<animate
+attributeName="stroke-opacity"
+values=".15;.45;.15"
+dur="6s"
+repeatCount="indefinite"/>
+
+</line>
+
+<!-- Animated Scanline -->
+
+<rect
+x="0"
+y="-30"
+width="1600"
+height="30"
+fill="#22D3EE"
+opacity=".05">
+
+<animate
+attributeName="y"
+from="-30"
+to="530"
+dur="10s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Neon Beams -->
+
+<rect
+x="220"
+y="0"
+width="2"
+height="500"
+fill="#8B5CF6"
+opacity=".18">
+
+<animate
+attributeName="opacity"
+values=".05;.25;.05"
+dur="5s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<rect
+x="1360"
+y="0"
+width="2"
+height="500"
+fill="#22D3EE"
+opacity=".18">
+
+<animate
+attributeName="opacity"
+values=".05;.25;.05"
+dur="7s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Floating Glow Orbs -->
+
+<circle cx="260" cy="180" r="6" fill="#8B5CF6" opacity=".7">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -20;0 0"
+dur="6s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle cx="1340" cy="120" r="6" fill="#22D3EE" opacity=".7">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 18;0 0"
+dur="8s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- Ambient Glow -->
+
+<ellipse
+cx="800"
+cy="260"
+rx="650"
+ry="140"
+fill="#22D3EE"
+opacity=".025">
+
+<animate
+attributeName="opacity"
+values=".02;.06;.02"
+dur="8s"
+repeatCount="indefinite"/>
+
+</ellipse>
+
+<!-- ================================================= -->
+<!-- END PART 1B -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 1C : Cyberpunk Skyline -->
+<!-- ================================================= -->
+
+<g id="city">
+
+  <!-- Ground -->
+
+  <rect
+      x="0"
+      y="320"
+      width="1600"
+      height="180"
+      fill="#08101E"/>
+
+  <!-- Building 1 -->
+
+  <rect x="40" y="210" width="90" height="110" rx="2"
+        fill="#111827"
+        stroke="#22D3EE"
+        stroke-opacity=".15"/>
+
+  <!-- Building 2 -->
+
+  <rect x="150" y="160" width="70" height="160"
+        fill="#0F172A"
+        stroke="#8B5CF6"
+        stroke-opacity=".2"/>
+
+  <!-- Building 3 -->
+
+  <rect x="250" y="120" width="120" height="200"
+        fill="#111827"
+        stroke="#22D3EE"
+        stroke-opacity=".2"/>
+
+  <!-- Building 4 -->
+
+  <rect x="400" y="180" width="85" height="140"
+        fill="#0F172A"
+        stroke="#8B5CF6"
+        stroke-opacity=".15"/>
+
+  <!-- Building 5 -->
+
+  <rect x="520" y="90" width="110" height="230"
+        fill="#101827"
+        stroke="#22D3EE"
+        stroke-opacity=".18"/>
+
+  <!-- Building 6 -->
+
+  <rect x="670" y="150" width="95" height="170"
+        fill="#111827"
+        stroke="#8B5CF6"
+        stroke-opacity=".18"/>
+
+  <!-- Building 7 -->
+
+  <rect x="810" y="80" width="130" height="240"
+        fill="#0F172A"
+        stroke="#22D3EE"
+        stroke-opacity=".22"/>
+
+  <!-- Building 8 -->
+
+  <rect x="980" y="170" width="90" height="150"
+        fill="#101827"
+        stroke="#8B5CF6"
+        stroke-opacity=".18"/>
+
+  <!-- Building 9 -->
+
+  <rect x="1110" y="110" width="110" height="210"
+        fill="#111827"
+        stroke="#22D3EE"
+        stroke-opacity=".18"/>
+
+  <!-- Building 10 -->
+
+  <rect x="1260" y="160" width="80" height="160"
+        fill="#0F172A"
+        stroke="#8B5CF6"
+        stroke-opacity=".18"/>
+
+  <!-- Building 11 -->
+
+  <rect x="1370" y="100" width="140" height="220"
+        fill="#101827"
+        stroke="#22D3EE"
+        stroke-opacity=".2"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Windows -->
+<!-- ================================================= -->
+
+<g id="windows">
+
+<!-- Building 1 -->
+
+<g fill="#22D3EE" opacity=".75">
+
+<rect x="60" y="225" width="8" height="12"/>
+<rect x="82" y="225" width="8" height="12"/>
+<rect x="104" y="225" width="8" height="12"/>
+
+<rect x="60" y="250" width="8" height="12"/>
+<rect x="82" y="250" width="8" height="12"/>
+<rect x="104" y="250" width="8" height="12"/>
+
+<rect x="60" y="275" width="8" height="12"/>
+<rect x="82" y="275" width="8" height="12"/>
+<rect x="104" y="275" width="8" height="12"/>
+
+</g>
+
+<!-- Building 3 -->
+
+<g fill="#A855F7" opacity=".7">
+
+<rect x="280" y="140" width="10" height="14"/>
+<rect x="315" y="140" width="10" height="14"/>
+
+<rect x="280" y="170" width="10" height="14"/>
+<rect x="315" y="170" width="10" height="14"/>
+
+<rect x="280" y="200" width="10" height="14"/>
+<rect x="315" y="200" width="10" height="14"/>
+
+<rect x="280" y="230" width="10" height="14"/>
+<rect x="315" y="230" width="10" height="14"/>
+
+</g>
+
+<!-- Building 5 -->
+
+<g fill="#22D3EE" opacity=".8">
+
+<rect x="550" y="120" width="9" height="12"/>
+<rect x="585" y="120" width="9" height="12"/>
+
+<rect x="550" y="150" width="9" height="12"/>
+<rect x="585" y="150" width="9" height="12"/>
+
+<rect x="550" y="180" width="9" height="12"/>
+<rect x="585" y="180" width="9" height="12"/>
+
+<rect x="550" y="210" width="9" height="12"/>
+<rect x="585" y="210" width="9" height="12"/>
+
+</g>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Rooftop Antennas -->
+<!-- ================================================= -->
+
+<g
+stroke="#22D3EE"
+stroke-width="2"
+opacity=".45">
+
+<line x1="575" y1="90" x2="575" y2="55"/>
+<line x1="875" y1="80" x2="875" y2="35"/>
+<line x1="1165" y1="110" x2="1165" y2="70"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Animated Rooftop Lights -->
+<!-- ================================================= -->
+
+<circle cx="575" cy="55" r="3" fill="#22D3EE">
+
+<animate
+attributeName="opacity"
+values="1;.2;1"
+dur="2s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle cx="875" cy="35" r="3" fill="#A855F7">
+
+<animate
+attributeName="opacity"
+values="1;.1;1"
+dur="1.5s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle cx="1165" cy="70" r="3" fill="#22D3EE">
+
+<animate
+attributeName="opacity"
+values="1;.3;1"
+dur="2.5s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- ================================================= -->
+<!-- City Fog -->
+<!-- ================================================= -->
+
+<rect
+x="0"
+y="280"
+width="1600"
+height="120"
+fill="#22D3EE"
+opacity=".03">
+
+<animate
+attributeName="opacity"
+values=".02;.06;.02"
+dur="8s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- ================================================= -->
+<!-- END PART 1C -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 2A : DEVELOPER WORKSPACE -->
+<!-- ================================================= -->
+
+<g id="workspace">
+
+  <!-- Desk Shadow -->
+  <ellipse
+      cx="800"
+      cy="430"
+      rx="360"
+      ry="28"
+      fill="#000"
+      opacity=".25"/>
+
+  <!-- Desk -->
+
+  <rect
+      x="430"
+      y="390"
+      width="740"
+      height="22"
+      rx="4"
+      fill="#1A2235"/>
+
+  <rect
+      x="430"
+      y="412"
+      width="740"
+      height="8"
+      fill="#101827"/>
+
+  <!-- RGB Strip -->
+
+  <rect
+      x="430"
+      y="410"
+      width="740"
+      height="2"
+      fill="#22D3EE">
+
+      <animate
+          attributeName="fill"
+          values="#22D3EE;#8B5CF6;#22D3EE"
+          dur="6s"
+          repeatCount="indefinite"/>
+
+  </rect>
+
+  <!-- Ultrawide Monitor -->
+
+  <rect
+      x="585"
+      y="130"
+      width="430"
+      height="205"
+      rx="18"
+      fill="#0B1120"
+      stroke="#22D3EE"
+      stroke-width="2"
+      filter="url(#neon)"/>
+
+  <!-- Screen -->
+
+  <rect
+      x="598"
+      y="142"
+      width="404"
+      height="180"
+      rx="10"
+      fill="#050816"/>
+
+  <!-- Monitor Stand -->
+
+  <rect
+      x="782"
+      y="335"
+      width="36"
+      height="42"
+      rx="5"
+      fill="#2A3448"/>
+
+  <rect
+      x="735"
+      y="375"
+      width="130"
+      height="10"
+      rx="5"
+      fill="#3A465A"/>
+
+  <!-- Vertical Monitor -->
+
+  <rect
+      x="1045"
+      y="150"
+      width="120"
+      height="220"
+      rx="12"
+      fill="#0B1120"
+      stroke="#8B5CF6"
+      stroke-width="2"
+      filter="url(#neon)"/>
+
+  <rect
+      x="1055"
+      y="160"
+      width="100"
+      height="200"
+      rx="8"
+      fill="#050816"/>
+
+  <!-- Laptop -->
+
   <g>
-    <text x="50" y="100" fill="white" font-size="48" font-family="Segoe UI" font-weight="700">
+
+    <rect
+        x="515"
+        y="310"
+        width="165"
+        height="12"
+        rx="3"
+        fill="#1F2937"/>
+
+    <rect
+        x="535"
+        y="250"
+        width="125"
+        height="68"
+        rx="6"
+        fill="#0B1120"
+        stroke="#22D3EE"
+        stroke-width="1.5"/>
+
+    <rect
+        x="544"
+        y="258"
+        width="107"
+        height="50"
+        fill="#050816"/>
+
+  </g>
+
+  <!-- Mouse Pad -->
+
+  <rect
+      x="880"
+      y="360"
+      width="170"
+      height="40"
+      rx="10"
+      fill="#111827"/>
+
+  <!-- Mouse -->
+
+  <ellipse
+      cx="1000"
+      cy="378"
+      rx="12"
+      ry="18"
+      fill="#1F2937"
+      stroke="#22D3EE"/>
+
+  <!-- Keyboard -->
+
+  <rect
+      x="640"
+      y="355"
+      width="210"
+      height="36"
+      rx="8"
+      fill="#111827"
+      stroke="#444"/>
+
+  <!-- Keyboard RGB -->
+
+  <line x1="650" y1="365" x2="840" y2="365"
+        stroke="#22D3EE">
+
+      <animate
+          attributeName="stroke"
+          values="#22D3EE;#8B5CF6;#22D3EE"
+          dur="5s"
+          repeatCount="indefinite"/>
+
+  </line>
+
+  <line x1="650" y1="375" x2="840" y2="375"
+        stroke="#8B5CF6">
+
+      <animate
+          attributeName="stroke"
+          values="#8B5CF6;#22D3EE;#8B5CF6"
+          dur="5s"
+          repeatCount="indefinite"/>
+
+  </line>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 2A -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 2B : VS CODE INTERFACE -->
+<!-- ================================================= -->
+
+<g id="vscode-ui">
+
+  <!-- Window Bar -->
+  <rect
+      x="598"
+      y="142"
+      width="404"
+      height="22"
+      fill="#111827"/>
+
+  <!-- Window Buttons -->
+  <circle cx="612" cy="153" r="4" fill="#FF5F57"/>
+  <circle cx="626" cy="153" r="4" fill="#FEBC2E"/>
+  <circle cx="640" cy="153" r="4" fill="#28C840"/>
+
+  <!-- Activity Bar -->
+  <rect
+      x="598"
+      y="164"
+      width="34"
+      height="158"
+      fill="#0B1220"/>
+
+  <circle cx="615" cy="182" r="5" fill="#22D3EE"/>
+  <circle cx="615" cy="205" r="5" fill="#8B5CF6"/>
+  <circle cx="615" cy="228" r="5" fill="#22D3EE"/>
+  <circle cx="615" cy="251" r="5" fill="#8B5CF6"/>
+  <circle cx="615" cy="274" r="5" fill="#22D3EE"/>
+
+  <!-- Explorer -->
+  <rect
+      x="632"
+      y="164"
+      width="95"
+      height="158"
+      fill="#101827"/>
+
+  <text x="642" y="180"
+        fill="#9CA3AF"
+        font-size="9"
+        font-family="monospace">
+
+EXPLORER
+
+  </text>
+
+  <text x="642" y="198"
+        fill="#22D3EE"
+        font-size="8"
+        font-family="monospace">
+
+📁 frontend
+
+  </text>
+
+  <text x="652" y="212"
+        fill="#E5E7EB"
+        font-size="8"
+        font-family="monospace">
+
+📄 App.jsx
+
+  </text>
+
+  <text x="652" y="225"
+        fill="#E5E7EB"
+        font-size="8"
+        font-family="monospace">
+
+📄 Navbar.jsx
+
+  </text>
+
+  <text x="652" y="238"
+        fill="#E5E7EB"
+        font-size="8"
+        font-family="monospace">
+
+📄 Dashboard.jsx
+
+  </text>
+
+  <text x="642" y="258"
+        fill="#8B5CF6"
+        font-size="8"
+        font-family="monospace">
+
+📁 backend
+
+  </text>
+
+  <text x="652" y="272"
+        fill="#E5E7EB"
+        font-size="8"
+        font-family="monospace">
+
+📄 main.py
+
+  </text>
+
+  <text x="652" y="285"
+        fill="#E5E7EB"
+        font-size="8"
+        font-family="monospace">
+
+📄 api.py
+
+  </text>
+
+  <!-- Code Editor -->
+  <rect
+      x="727"
+      y="164"
+      width="275"
+      height="158"
+      fill="#050816"/>
+
+  <!-- Tabs -->
+
+  <rect x="727" y="164" width="80" height="18" fill="#1E293B"/>
+
+  <text
+      x="737"
+      y="176"
+      fill="#22D3EE"
+      font-size="8"
+      font-family="monospace">
+
+App.jsx
+
+  </text>
+
+  <!-- Code -->
+
+  <text x="740" y="196"
+        fill="#C084FC"
+        font-size="8"
+        font-family="monospace">
+
+import React from 'react'
+
+  </text>
+
+  <text x="740" y="212"
+        fill="#22D3EE"
+        font-size="8"
+        font-family="monospace">
+
+const Dashboard = () => {
+
+  </text>
+
+  <text x="760" y="228"
+        fill="#FFFFFF"
+        font-size="8"
+        font-family="monospace">
+
+return (
+
+  </text>
+
+  <text x="780" y="244"
+        fill="#60A5FA"
+        font-size="8"
+        font-family="monospace">
+
+&lt;Dashboard /&gt;
+
+  </text>
+
+  <text x="760" y="260"
+        fill="#FFFFFF"
+        font-size="8"
+        font-family="monospace">
+
+)
+
+  </text>
+
+  <text x="740" y="276"
+        fill="#22D3EE"
+        font-size="8"
+        font-family="monospace">
+
+}
+
+  </text>
+
+  <text x="740" y="294"
+        fill="#8B5CF6"
+        font-size="8"
+        font-family="monospace">
+
+export default Dashboard
+
+  </text>
+
+  <!-- Blinking Cursor -->
+
+  <rect
+      x="840"
+      y="286"
+      width="2"
+      height="10"
+      fill="#22D3EE">
+
+      <animate
+          attributeName="opacity"
+          values="1;0;1"
+          dur="1s"
+          repeatCount="indefinite"/>
+
+  </rect>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 2B -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 2C : TERMINAL + DASHBOARD -->
+<!-- ================================================= -->
+
+<g id="terminal-ui">
+
+  <!-- Terminal Panel -->
+  <rect
+      x="535"
+      y="258"
+      width="107"
+      height="50"
+      rx="3"
+      fill="#071018"/>
+
+  <text
+      x="542"
+      y="270"
+      fill="#22D3EE"
+      font-size="6"
+      font-family="monospace">
+
+PS C:\Projects\portfolio&gt;
+
+  </text>
+
+  <text
+      x="542"
+      y="280"
+      fill="#8B5CF6"
+      font-size="6"
+      font-family="monospace">
+
+npm run dev
+
+  </text>
+
+  <text
+      x="542"
+      y="290"
+      fill="#22D3EE"
+      font-size="6"
+      font-family="monospace">
+
+✓ Ready in 720ms
+
+  </text>
+
+  <text
+      x="542"
+      y="300"
+      fill="#4ADE80"
+      font-size="6"
+      font-family="monospace">
+
+localhost:3000
+
+  </text>
+
+</g>
+
+<!-- ================================================= -->
+<!-- React Badge -->
+<!-- ================================================= -->
+
+<g>
+
+<circle
+cx="962"
+cy="178"
+r="13"
+fill="none"
+stroke="#61DAFB"
+stroke-width="1.6">
+
+<animateTransform
+attributeName="transform"
+type="rotate"
+from="0 962 178"
+to="360 962 178"
+dur="8s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<circle
+cx="962"
+cy="178"
+r="2.8"
+fill="#61DAFB"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- FastAPI Badge -->
+<!-- ================================================= -->
+
+<g>
+
+<rect
+x="944"
+y="210"
+width="36"
+height="14"
+rx="3"
+fill="#0891B2"/>
+
+<text
+x="949"
+y="220"
+fill="white"
+font-size="6"
+font-family="monospace">
+
+FASTAPI
+
+</text>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Git Branch -->
+<!-- ================================================= -->
+
+<g>
+
+<rect
+x="930"
+y="240"
+width="60"
+height="14"
+rx="3"
+fill="#1E293B"/>
+
+<circle
+cx="938"
+cy="247"
+r="2"
+fill="#22D3EE"/>
+
+<text
+x="944"
+y="250"
+fill="#E5E7EB"
+font-size="6"
+font-family="monospace">
+
+main
+
+</text>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Vertical Monitor Dashboard -->
+<!-- ================================================= -->
+
+<g>
+
+<!-- Header -->
+
+<rect
+x="1055"
+y="160"
+width="100"
+height="16"
+fill="#111827"/>
+
+<text
+x="1062"
+y="171"
+fill="#22D3EE"
+font-size="7"
+font-family="monospace">
+
+SYSTEM DASHBOARD
+
+</text>
+
+<!-- CPU -->
+
+<text
+x="1062"
+y="190"
+fill="#FFFFFF"
+font-size="6"
+font-family="monospace">
+
+CPU
+
+</text>
+
+<rect
+x="1088"
+y="184"
+width="50"
+height="5"
+rx="2"
+fill="#233042"/>
+
+<rect
+x="1088"
+y="184"
+width="34"
+height="5"
+rx="2"
+fill="#22D3EE">
+
+<animate
+attributeName="width"
+values="20;38;28;34;20"
+dur="6s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Memory -->
+
+<text
+x="1062"
+y="205"
+fill="#FFFFFF"
+font-size="6"
+font-family="monospace">
+
+RAM
+
+</text>
+
+<rect
+x="1088"
+y="199"
+width="50"
+height="5"
+rx="2"
+fill="#233042"/>
+
+<rect
+x="1088"
+y="199"
+width="25"
+height="5"
+rx="2"
+fill="#A855F7">
+
+<animate
+attributeName="width"
+values="18;32;26;40;18"
+dur="7s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Network -->
+
+<text
+x="1062"
+y="220"
+fill="#FFFFFF"
+font-size="6"
+font-family="monospace">
+
+NET
+
+</text>
+
+<polyline
+points="1088,220 1095,214 1102,222 1110,208 1118,216 1128,204 1138,210"
+fill="none"
+stroke="#22D3EE"
+stroke-width="1.4">
+
+<animate
+attributeName="stroke-opacity"
+values=".4;1;.4"
+dur="2s"
+repeatCount="indefinite"/>
+
+</polyline>
+
+<!-- API -->
+
+<text
+x="1062"
+y="245"
+fill="#4ADE80"
+font-size="7"
+font-family="monospace">
+
+API ONLINE
+
+</text>
+
+<circle
+cx="1138"
+cy="243"
+r="3"
+fill="#4ADE80">
+
+<animate
+attributeName="opacity"
+values="1;.2;1"
+dur="1.5s"
+repeatCount="indefinite"/>
+
+</circle>
+
+<!-- Mini Graph -->
+
+<polyline
+points="1065,285 1075,278 1088,280 1102,260 1118,270 1135,240"
+fill="none"
+stroke="#A855F7"
+stroke-width="2"/>
+
+<polyline
+points="1065,305 1075,300 1088,296 1102,302 1118,288 1135,292"
+fill="none"
+stroke="#22D3EE"
+stroke-width="2"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 2C -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 3A : DESK ACCESSORIES -->
+<!-- ================================================= -->
+
+<g id="desk-accessories">
+
+  <!-- Coffee Mug -->
+
+  <g>
+
+    <ellipse
+        cx="520"
+        cy="370"
+        rx="16"
+        ry="14"
+        fill="#F8FAFC"/>
+
+    <rect
+        x="504"
+        y="350"
+        width="32"
+        height="22"
+        rx="4"
+        fill="#E5E7EB"/>
+
+    <path
+        d="M536 355
+           C546 355 546 366 536 366"
+        fill="none"
+        stroke="#E5E7EB"
+        stroke-width="3"/>
+
+    <!-- Steam -->
+
+    <path
+        d="M514 345
+           C510 338 520 334 516 326"
+        stroke="#FFFFFF"
+        stroke-width="2"
+        fill="none"
+        opacity=".6">
+
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;0 -6;0 0"
+            dur="4s"
+            repeatCount="indefinite"/>
+
+    </path>
+
+    <path
+        d="M523 345
+           C519 337 529 333 524 324"
+        stroke="#FFFFFF"
+        stroke-width="2"
+        fill="none"
+        opacity=".45">
+
+        <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0 0;0 -8;0 0"
+            dur="5s"
+            repeatCount="indefinite"/>
+
+    </path>
+
+  </g>
+
+  <!-- Smartphone -->
+
+  <g>
+
+    <rect
+        x="1070"
+        y="356"
+        width="32"
+        height="58"
+        rx="6"
+        fill="#0B1120"
+        stroke="#22D3EE"/>
+
+    <rect
+        x="1075"
+        y="362"
+        width="22"
+        height="42"
+        rx="3"
+        fill="#050816"/>
+
+    <circle
+        cx="1086"
+        cy="408"
+        r="2"
+        fill="#22D3EE"/>
+
+  </g>
+
+  <!-- Headphones -->
+
+  <g>
+
+    <path
+        d="M1115 335
+           A26 26 0 0 1 1167 335"
+        fill="none"
+        stroke="#8B5CF6"
+        stroke-width="5"/>
+
+    <rect
+        x="1112"
+        y="335"
+        width="8"
+        height="24"
+        rx="3"
+        fill="#1F2937"/>
+
+    <rect
+        x="1162"
+        y="335"
+        width="8"
+        height="24"
+        rx="3"
+        fill="#1F2937"/>
+
+  </g>
+
+  <!-- Desk Plant -->
+
+  <g>
+
+    <rect
+        x="1185"
+        y="360"
+        width="28"
+        height="26"
+        rx="3"
+        fill="#6B4F2A"/>
+
+    <ellipse
+        cx="1199"
+        cy="348"
+        rx="9"
+        ry="18"
+        fill="#16A34A"/>
+
+    <ellipse
+        cx="1191"
+        cy="352"
+        rx="6"
+        ry="12"
+        fill="#22C55E"/>
+
+    <ellipse
+        cx="1208"
+        cy="352"
+        rx="6"
+        ry="12"
+        fill="#22C55E"/>
+
+  </g>
+
+  <!-- RGB Desk Lamp -->
+
+  <g>
+
+    <line
+        x1="470"
+        y1="390"
+        x2="470"
+        y2="250"
+        stroke="#6B7280"
+        stroke-width="4"/>
+
+    <line
+        x1="470"
+        y1="250"
+        x2="535"
+        y2="225"
+        stroke="#6B7280"
+        stroke-width="4"/>
+
+    <ellipse
+        cx="542"
+        cy="220"
+        rx="18"
+        ry="10"
+        fill="#111827"/>
+
+    <!-- Lamp Light -->
+
+    <path
+        d="M542 220
+           L505 315
+           L579 315 Z"
+        fill="#22D3EE"
+        opacity=".07">
+
+        <animate
+            attributeName="opacity"
+            values=".04;.12;.04"
+            dur="6s"
+            repeatCount="indefinite"/>
+
+    </path>
+
+  </g>
+
+</g>
+
+<!-- ================================================= -->
+<!-- KEYBOARD DETAILS -->
+<!-- ================================================= -->
+
+<g id="keyboard-keys">
+
+<rect x="650" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="662" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="674" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="686" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="698" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="710" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="722" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="734" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="746" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="758" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="770" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="782" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="794" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="806" y="360" width="8" height="6" rx="1" fill="#374151"/>
+<rect x="818" y="360" width="8" height="6" rx="1" fill="#374151"/>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Ambient Desk Glow -->
+<!-- ================================================= -->
+
+<ellipse
+cx="800"
+cy="392"
+rx="420"
+ry="55"
+fill="#22D3EE"
+opacity=".03">
+
+<animate
+attributeName="opacity"
+values=".02;.05;.02"
+dur="8s"
+repeatCount="indefinite"/>
+
+</ellipse>
+
+<!-- ================================================= -->
+<!-- END PART 3A -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 3B : AI HOLOGRAM + CIRCUITS -->
+<!-- ================================================= -->
+
+<g id="ai-hologram">
+
+  <!-- Hologram Base -->
+  <ellipse
+      cx="1310"
+      cy="355"
+      rx="32"
+      ry="8"
+      fill="#22D3EE"
+      opacity=".35"/>
+
+  <!-- Beam -->
+  <path
+      d="M1295 355
+         L1310 285
+         L1325 355 Z"
+      fill="#22D3EE"
+      opacity=".08">
+
+      <animate
+          attributeName="opacity"
+          values=".03;.12;.03"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+  </path>
+
+  <!-- AI Orb -->
+  <circle
+      cx="1310"
+      cy="270"
+      r="20"
+      fill="none"
+      stroke="#22D3EE"
+      stroke-width="2">
+
+      <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 1310 270"
+          to="360 1310 270"
+          dur="10s"
+          repeatCount="indefinite"/>
+
+  </circle>
+
+  <circle
+      cx="1310"
+      cy="270"
+      r="8"
+      fill="#22D3EE">
+
+      <animate
+          attributeName="r"
+          values="7;10;7"
+          dur="2s"
+          repeatCount="indefinite"/>
+
+  </circle>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Floating Tech Cards -->
+<!-- ================================================= -->
+
+<g opacity=".9">
+
+<rect
+x="1140"
+y="55"
+width="80"
+height="26"
+rx="8"
+fill="#101827"
+stroke="#22D3EE">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -6;0 0"
+dur="5s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<text
+x="1160"
+y="72"
+fill="#22D3EE"
+font-size="10"
+font-family="monospace">
+
+React
+
+</text>
+
+<rect
+x="1250"
+y="80"
+width="92"
+height="26"
+rx="8"
+fill="#101827"
+stroke="#8B5CF6">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 8;0 0"
+dur="6s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<text
+x="1270"
+y="97"
+fill="#8B5CF6"
+font-size="10"
+font-family="monospace">
+
+FastAPI
+
+</text>
+
+<rect
+x="1365"
+y="55"
+width="70"
+height="26"
+rx="8"
+fill="#101827"
+stroke="#22D3EE">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -5;0 0"
+dur="7s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<text
+x="1387"
+y="72"
+fill="#22D3EE"
+font-size="10"
+font-family="monospace">
+
+Docker
+
+</text>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Circuit Traces -->
+<!-- ================================================= -->
+
+<g
+fill="none"
+stroke="#22D3EE"
+stroke-width="1.2"
+opacity=".25">
+
+<path
+d="M420 392
+L520 392
+L540 375
+L640 375
+L690 350
+L770 350">
+
+<animate
+attributeName="stroke-opacity"
+values=".15;.5;.15"
+dur="4s"
+repeatCount="indefinite"/>
+
+</path>
+
+<path
+d="M920 392
+L990 392
+L1030 360
+L1110 360
+L1170 335">
+
+<animate
+attributeName="stroke-opacity"
+values=".5;.15;.5"
+dur="5s"
+repeatCount="indefinite"/>
+
+</path>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Network Nodes -->
+<!-- ================================================= -->
+
+<g>
+
+<circle cx="520" cy="392" r="3" fill="#22D3EE">
+<animate attributeName="r"
+values="2;4;2"
+dur="3s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="690" cy="350" r="3" fill="#8B5CF6">
+<animate attributeName="r"
+values="2;4;2"
+dur="4s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1030" cy="360" r="3" fill="#22D3EE">
+<animate attributeName="r"
+values="2;4;2"
+dur="5s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1170" cy="335" r="3" fill="#8B5CF6">
+<animate attributeName="r"
+values="2;4;2"
+dur="4s"
+repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+<!-- ================================================= -->
+<!-- Floating Data Particles -->
+<!-- ================================================= -->
+
+<g>
+
+<circle cx="760" cy="130" r="2" fill="#22D3EE">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -25;0 0"
+dur="6s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="820" cy="110" r="2" fill="#8B5CF6">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -18;0 0"
+dur="5s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="870" cy="145" r="2" fill="#22D3EE">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;0 -20;0 0"
+dur="7s"
+repeatCount="indefinite"/>
+</circle>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 3B -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 4A : CYBERPUNK ATMOSPHERE -->
+<!-- ================================================= -->
+
+<!-- Light Rays -->
+
+<g opacity=".10">
+
+<path
+d="M180 -100 L260 500"
+stroke="#22D3EE"
+stroke-width="120">
+
+<animate
+attributeName="opacity"
+values=".05;.12;.05"
+dur="12s"
+repeatCount="indefinite"/>
+
+</path>
+
+<path
+d="M1500 -100 L1400 500"
+stroke="#8B5CF6"
+stroke-width="150">
+
+<animate
+attributeName="opacity"
+values=".03;.10;.03"
+dur="15s"
+repeatCount="indefinite"/>
+
+</path>
+
+</g>
+
+<!-- Floating Hexagons -->
+
+<g
+stroke="#22D3EE"
+fill="none"
+opacity=".18">
+
+<polygon
+points="0,-10 9,-5 9,5 0,10 -9,5 -9,-5"
+transform="translate(240 120)">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="240 120;240 95;240 120"
+dur="8s"
+repeatCount="indefinite"/>
+
+</polygon>
+
+<polygon
+points="0,-12 11,-6 11,6 0,12 -11,6 -11,-6"
+transform="translate(1360 180)">
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="1360 180;1360 150;1360 180"
+dur="10s"
+repeatCount="indefinite"/>
+
+</polygon>
+
+</g>
+
+<!-- Flying Drone -->
+
+<g>
+
+<ellipse
+cx="1180"
+cy="120"
+rx="20"
+ry="6"
+fill="#111827"
+stroke="#22D3EE"/>
+
+<circle
+cx="1170"
+cy="120"
+r="2"
+fill="#22D3EE"/>
+
+<circle
+cx="1190"
+cy="120"
+r="2"
+fill="#8B5CF6"/>
+
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 0;-180 30;0 0"
+dur="18s"
+repeatCount="indefinite"/>
+
+</g>
+
+<!-- Neon Billboard -->
+
+<g>
+
+<rect
+x="320"
+y="150"
+width="95"
+height="40"
+rx="5"
+fill="#111827"
+stroke="#22D3EE"/>
+
+<text
+x="338"
+y="174"
+fill="#22D3EE"
+font-size="10"
+font-family="monospace">
+
+WELCOME
+
+</text>
+
+<animate
+attributeName="opacity"
+values="1;.3;1"
+dur="2s"
+repeatCount="indefinite"/>
+
+</g>
+
+<!-- Fog Layer -->
+
+<rect
+x="0"
+y="300"
+width="1600"
+height="200"
+fill="#22D3EE"
+opacity=".03">
+
+<animate
+attributeName="opacity"
+values=".02;.05;.02"
+dur="8s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Digital Rain -->
+
+<g
+stroke="#22D3EE"
+stroke-width=".7"
+opacity=".15">
+
+<line x1="100" y1="0" x2="100" y2="25">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 -40;0 520"
+dur="7s"
+repeatCount="indefinite"/>
+</line>
+
+<line x1="320" y1="-30" x2="320" y2="20">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 -50;0 520"
+dur="6s"
+repeatCount="indefinite"/>
+</line>
+
+<line x1="670" y1="-20" x2="670" y2="30">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 -40;0 520"
+dur="5s"
+repeatCount="indefinite"/>
+</line>
+
+<line x1="980" y1="-60" x2="980" y2="0">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 -60;0 520"
+dur="8s"
+repeatCount="indefinite"/>
+</line>
+
+<line x1="1320" y1="-30" x2="1320" y2="20">
+<animateTransform
+attributeName="transform"
+type="translate"
+values="0 -30;0 520"
+dur="7s"
+repeatCount="indefinite"/>
+</line>
+
+</g>
+
+<!-- Background Pulse -->
+
+<rect
+width="1600"
+height="500"
+fill="#8B5CF6"
+opacity=".015">
+
+<animate
+attributeName="opacity"
+values=".01;.03;.01"
+dur="10s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- ================================================= -->
+<!-- END PART 4A -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 5A : PERSONAL BRANDING -->
+<!-- ================================================= -->
+
+<g id="branding">
+
+  <!-- Neon Accent Line -->
+
+  <rect
+      x="70"
+      y="72"
+      width="320"
+      height="5"
+      rx="3"
+      fill="url(#neonGradient)">
+
+      <animate
+          attributeName="width"
+          values="0;320;320"
+          dur="2s"
+          fill="freeze"/>
+
+  </rect>
+
+  <!-- NAME -->
+
+  <text
+      x="70"
+      y="140"
+      font-size="58"
+      font-weight="700"
+      font-family="Segoe UI"
+      fill="#FFFFFF"
+      filter="url(#neonGlow)">
+
       K. SANTHOSH
-    </text>
-    <text x="50" y="150" fill="#22D3EE" font-size="24" font-family="Segoe UI">
-      Software Developer (Full Stack)
-    </text>
-    <text x="50" y="200" fill="#A855F7" font-size="24" font-family="Segoe UI">
-      Application Builder
-    </text>
-    <text x="50" y="250" fill="#94A3B8" font-size="18" font-family="Segoe UI">
-      Building scalable applications with clean code and modern technologies.
-    </text>
+
+      <animate
+          attributeName="opacity"
+          values="0;1"
+          dur="1.5s"
+          fill="freeze"/>
+
+  </text>
+
+  <!-- Cyan Glow -->
+
+  <text
+      x="70"
+      y="140"
+      font-size="58"
+      font-weight="700"
+      font-family="Segoe UI"
+      fill="#22D3EE"
+      opacity=".15">
+
+      K. SANTHOSH
+
+      <animate
+          attributeName="opacity"
+          values=".05;.22;.05"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+  </text>
+
+  <!-- ROLE -->
+
+  <text
+      x="72"
+      y="185"
+      font-size="25"
+      fill="#22D3EE"
+      font-family="Segoe UI">
+
+      Software Developer
+
+  </text>
+
+  <!-- SUBTITLE -->
+
+  <text
+      x="72"
+      y="218"
+      font-size="20"
+      fill="#A855F7"
+      font-family="Segoe UI">
+
+      Full Stack • AI &amp; Data Science
+
+  </text>
+
+  <!-- TAGLINE -->
+
+  <text
+      x="72"
+      y="265"
+      font-size="18"
+      fill="#CBD5E1"
+      font-family="Segoe UI">
+
+      Building scalable applications
+
+  </text>
+
+  <text
+      x="72"
+      y="292"
+      font-size="18"
+      fill="#CBD5E1"
+      font-family="Segoe UI">
+
+      AI Solutions • Modern Web Experiences
+
+  </text>
+
+  <!-- STATUS CHIP -->
+
+  <rect
+      x="72"
+      y="325"
+      rx="16"
+      ry="16"
+      width="165"
+      height="34"
+      fill="#0F172A"
+      stroke="#22D3EE"/>
+
+  <circle
+      cx="92"
+      cy="342"
+      r="5"
+      fill="#22D3EE">
+
+      <animate
+          attributeName="opacity"
+          values="1;.3;1"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+
+  </circle>
+
+  <text
+      x="106"
+      y="348"
+      font-size="15"
+      fill="#FFFFFF"
+      font-family="Segoe UI">
+
+      Available for Work
+
+  </text>
+
+  <!-- GITHUB -->
+
+  <g transform="translate(72 390)">
+
+      <circle
+          r="18"
+          fill="#101827"
+          stroke="#22D3EE"/>
+
+      <text
+          x="-7"
+          y="6"
+          font-size="18"
+          fill="#22D3EE"
+          font-family="Segoe UI">
+
+          GH
+
+      </text>
+
   </g>
 
-  <!-- Center Section: Workstation -->
-  <g>
-    <!-- Desk -->
-    <path d="M600 400 Q800 380 1000 400 L1000 420 Q800 440 600 420 Z" fill="#0F172A" />
+  <!-- LINKEDIN -->
 
-    <!-- Curved Ultrawide Monitor -->
-    <path d="M650 200 Q800 150 950 200 L950 300 Q800 250 650 300 Z" fill="#1E293B" stroke="#22D3EE" stroke-width="2" />
-    <rect x="750" y="220" width="100" height="40" fill="#050816" />
-    <text x="760" y="245" fill="#22D3EE" font-size="14" font-family="Consolas">Code Editor</text>
+  <g transform="translate(122 390)">
 
-    <!-- Laptop -->
-    <path d="M700 320 Q750 310 800 320 L800 350 Q750 360 700 350 Z" fill="#1E293B" stroke="#8B5CF6" stroke-width="2" />
-    <text x="710" y="340" fill="#22D3EE" font-size="12" font-family="Consolas">Terminal</text>
+      <circle
+          r="18"
+          fill="#101827"
+          stroke="#8B5CF6"/>
 
-    <!-- Mechanical Keyboard -->
-    <path d="M650 370 Q800 360 950 370 L950 380 Q800 390 650 380 Z" fill="#0F172A" stroke="#22D3EE" stroke-width="1" />
+      <text
+          x="-6"
+          y="6"
+          font-size="15"
+          fill="#8B5CF6"
+          font-family="Segoe UI">
 
-    <!-- Mouse -->
-    <ellipse cx="600" cy="380" rx="10" ry="5" fill="#22D3EE" />
+          in
+
+      </text>
+
   </g>
 
-  <!-- Right Section: HUD -->
-  <g>
-    <rect x="1200" y="100" width="300" height="300" fill="#0F172A" stroke="#22D3EE" stroke-width="2" />
-    <text x="1250" y="150" fill="#22D3EE" font-size="18" font-family="Consolas">
-      SYSTEM STATUS
-    </text>
-    <text x="1250" y="200" fill="white" font-size="16">● CPU&nbsp;&nbsp;&nbsp;&nbsp;85%</text>
-    <text x="1250" y="230" fill="white" font-size="16">● Memory&nbsp;&nbsp;70%</text>
-    <text x="1250" y="260" fill="white" font-size="16">● Cloud&nbsp;&nbsp;&nbsp;&nbsp;Active</text>
-    <text x="1250" y="290" fill="white" font-size="16">● Database&nbsp;Online</text>
-    <text x="1250" y="320" fill="white" font-size="16">● APIs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active</text>
-    <text x="1250" y="350" fill="white" font-size="16">● Git&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synced</text>
-    <text x="1250" y="380" fill="white" font-size="16">● AI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online</text>
+  <!-- EMAIL -->
+
+  <g transform="translate(172 390)">
+
+      <circle
+          r="18"
+          fill="#101827"
+          stroke="#22D3EE"/>
+
+      <text
+          x="-7"
+          y="6"
+          font-size="15"
+          fill="#22D3EE"
+          font-family="Segoe UI">
+
+          @
+
+      </text>
+
   </g>
 
-  <!-- Particles -->
-  <g>
-    <circle cx="200" cy="400" r="3" fill="url(#particleGradient)">
-      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="1400" cy="300" r="3" fill="url(#particleGradient)">
-      <animate attributeName="opacity" values="1;0;1" dur="4s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="800" cy="200" r="3" fill="url(#particleGradient)">
-      <animate attributeName="opacity" values="1;0;1" dur="5s" repeatCount="indefinite" />
-    </circle>
+  <!-- Decorative Dots -->
+
+  <circle cx="355" cy="108" r="3" fill="#22D3EE">
+      <animate
+          attributeName="r"
+          values="2;4;2"
+          dur="3s"
+          repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="380" cy="140" r="2" fill="#8B5CF6">
+      <animate
+          attributeName="opacity"
+          values=".2;1;.2"
+          dur="4s"
+          repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="340" cy="190" r="2" fill="#22D3EE">
+      <animate
+          attributeName="opacity"
+          values=".2;1;.2"
+          dur="5s"
+          repeatCount="indefinite"/>
+  </circle>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 5A -->
+<!-- ================================================= -->
+<!-- ================================================= -->
+<!-- PART 5B : FLOATING TECHNOLOGY BADGES -->
+<!-- ================================================= -->
+
+<g id="tech-stack">
+
+  <!-- ROW 1 -->
+
+  <g transform="translate(460 55)">
+    <rect width="78" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="17" y="18" fill="#22D3EE" font-size="12" font-family="Segoe UI">React</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="460 55;460 48;460 55"
+      dur="5s" repeatCount="indefinite"/>
   </g>
+
+  <g transform="translate(560 30)">
+    <rect width="82" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="14" y="18" fill="#8B5CF6" font-size="12" font-family="Segoe UI">Next.js</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="560 30;560 38;560 30"
+      dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(670 55)">
+    <rect width="90" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="12" y="18" fill="#22D3EE" font-size="12">JavaScript</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="670 55;670 48;670 55"
+      dur="4.5s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(790 25)">
+    <rect width="90" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="10" y="18" fill="#8B5CF6" font-size="12">TypeScript</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="790 25;790 35;790 25"
+      dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(920 55)">
+    <rect width="82" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="18" y="18" fill="#22D3EE" font-size="12">Python</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="920 55;920 45;920 55"
+      dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- ROW 2 -->
+
+  <g transform="translate(1140 45)">
+    <rect width="88" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="14" y="18" fill="#22D3EE" font-size="12">FastAPI</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1140 45;1140 55;1140 45"
+      dur="5.5s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(1260 70)">
+    <rect width="76" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="18" y="18" fill="#8B5CF6" font-size="12">Django</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1260 70;1260 62;1260 70"
+      dur="6.5s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(1360 40)">
+    <rect width="80" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="16" y="18" fill="#22D3EE" font-size="12">Node.js</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1360 40;1360 50;1360 40"
+      dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- RIGHT SIDE -->
+
+  <g transform="translate(1415 150)">
+    <rect width="82" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="14" y="18" fill="#22D3EE" font-size="12">Docker</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1415 150;1415 140;1415 150"
+      dur="5s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(1420 205)">
+    <rect width="70" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="22" y="18" fill="#8B5CF6" font-size="12">Git</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1420 205;1420 214;1420 205"
+      dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(1405 260)">
+    <rect width="90" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="14" y="18" fill="#22D3EE" font-size="12">GitHub</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1405 260;1405 250;1405 260"
+      dur="5s" repeatCount="indefinite"/>
+  </g>
+
+  <g transform="translate(1415 315)">
+    <rect width="76" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="18" y="18" fill="#8B5CF6" font-size="12">Linux</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="1415 315;1415 325;1415 315"
+      dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- BOTTOM -->
+
+  <g transform="translate(470 445)">
+    <rect width="86" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="14" y="18" fill="#22D3EE" font-size="12">PostgreSQL</text>
+  </g>
+
+  <g transform="translate(580 445)">
+    <rect width="70" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="18" y="18" fill="#8B5CF6" font-size="12">MySQL</text>
+  </g>
+
+  <g transform="translate(680 445)">
+    <rect width="92" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="12" y="18" fill="#22D3EE" font-size="12">MongoDB</text>
+  </g>
+
+  <g transform="translate(800 445)">
+    <rect width="90" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="10" y="18" fill="#8B5CF6" font-size="12">TensorFlow</text>
+  </g>
+
+  <g transform="translate(920 445)">
+    <rect width="72" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="16" y="18" fill="#22D3EE" font-size="12">NumPy</text>
+  </g>
+
+  <g transform="translate(1020 445)">
+    <rect width="74" height="28" rx="8" fill="#111827" stroke="#8B5CF6"/>
+    <text x="16" y="18" fill="#8B5CF6" font-size="12">Pandas</text>
+  </g>
+
+  <g transform="translate(1120 445)">
+    <rect width="82" height="28" rx="8" fill="#111827" stroke="#22D3EE"/>
+    <text x="16" y="18" fill="#22D3EE" font-size="12">VS Code</text>
+  </g>
+
+</g>
+
+<!-- ================================================= -->
+<!-- END PART 5B -->
 </svg>
